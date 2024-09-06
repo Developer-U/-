@@ -1,0 +1,290 @@
+/*Global*/
+
+:root {
+    --black: #3A383D;
+    --white: #fff;
+    --purple: #9818B5;
+    --depp-purple: #630A77;
+    --dark: #69548E;
+    --light-grey: #F0EEF4;
+}
+
+body {
+    background-color: var(--light-grey);
+    color: var(--black);
+}
+
+body p {
+    margin-bottom: inherit;
+    color: var(--black);
+}
+
+body .container {
+    max-width: 1400px;
+}
+
+.closed {
+    overflow-y: hidden;
+    height: 100vh;
+}
+
+body .container-fluid {
+    max-width: 1700px;
+}
+
+figure {
+    overflow: hidden;
+}
+
+figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+body ul,
+body li {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: inherit;
+}
+
+.dark {
+    background-color: var(--dark);
+}
+
+.dark * {
+    color: var(--white);
+}
+
+body .button {
+    font-family: var(--theme-button-font-family);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    letter-spacing: 2px;
+    line-height: 120%;
+    background: linear-gradient(to right, var(--purple), var(--depp-purple));
+    border-radius: 10px;
+    width: fit-content;
+    border: 1px solid #f5f5f5;
+}
+
+body .button:hover {
+    color: var(--white);
+    background: var(--depp-purple);
+}
+
+body .button.active {
+    color: var(--white);
+    background: var(--purple);
+}
+
+section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.post p:not(:last-of-type), .post ul, .post ol {
+    margin-bottom: 30px;
+}
+
+.post .share p {
+    margin-bottom: 0;
+}
+
+body h1, body h2 {
+    position: relative;
+    z-index: 2;
+}
+
+body h1 {
+    border-bottom: 1px solid var(--light-grey);
+    margin-bottom: 14px;
+    color: var(--white);
+    line-height: 120%;
+}
+
+body h1::before, body h2::before {
+    position: absolute;
+    z-index: 1;
+    content: "";
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body h1::before {
+    background-image: url('../img/h1_title_decor.svg');
+    background-size: contain;
+    left: -33px;
+    width: 150px;
+    height: 150px;
+    bottom: 30px;
+}
+
+.dark-bg {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: rgba(58, 56, 61, .6);
+    z-index: 2;
+}
+
+.right-text {
+    grid-template-columns: 50% calc(50% - 74px);
+    gap: 74px;
+}
+
+.right-text-box {
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+}
+
+.right-text-box>div {
+    margin-bottom: 50px;
+}
+
+/*Media*/
+@media (max-width:1765px) {
+    body h1::before {
+        left: -7px;
+    }
+}
+
+@media (max-width:1399px) {
+    body h1 {
+        font-size: 90px;
+    }
+
+    body h1::before {
+        width: 100px;
+        height: 100px;
+    }
+
+    .right-text {
+        grid-template-columns: 50% calc(50% - 40px);
+        gap: 40px;
+    }
+
+    .right-text-box {
+        padding-top: 3rem;
+        padding-bottom: 2rem;
+    }
+}
+
+@media (max-width:1199px) {
+    body h1 {
+        font-size: 73px;
+    }
+
+    .post p:not(:last-of-type), .post ul, .post ol {
+        margin-bottom: 24px;
+    }
+
+    body .button {
+        font-size: 20px;
+    }
+
+    body h1::before {
+        width: 70px;
+        height: 70px;
+        bottom: 24px;
+    }
+
+    .right-text-box {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .right-text {
+        grid-template-columns: 50% calc(50% - 20px);
+        gap: 20px;
+    }
+
+    .right-text-box>div {
+        margin-bottom: 34px;
+    }
+}
+
+@media (max-width:991px) {
+    .right-text {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .right-text-box>div {
+        margin-bottom: 0;
+    }
+
+    .right-text-box {
+        order: -1;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    section {
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+
+    section.hero {
+        padding-bottom: 12px;
+    }
+}
+
+@media (max-width:930px) and (max-height:420px) {
+    body h1 {
+        font-size: 60px;
+    }
+
+    section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .post p:not(:last-of-type), .post ul, .post ol {
+        margin-bottom: 18px;
+    }
+
+    .right-text {
+        grid-template-columns: 50% calc(50% - 20px);
+        gap: 20px;
+    }    
+}
+
+@media (max-width:767px) {
+    body h1 {
+        font-size: 60px;
+    }
+
+    section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .post p:not(:last-of-type), .post ul, .post ol {
+        margin-bottom: 18px;
+    }
+}
+
+@media (max-width:439px) {
+    body h1 {
+        font-size: 44px;
+    }
+
+    body h1::before {
+        width: 60px;
+        height: 60px;
+        bottom: 14px;
+    }
+
+    body .button {
+        font-size: 17px;
+        width: 100%;
+        letter-spacing: 1px;
+    }
+}
