@@ -59,7 +59,7 @@ if (have_rows('new_hero_slide')) { ?>
                 } ?>              
             </div>
             
-            <button class="button hero-wrapper__btn">заказать</button>
+            <a class="button hero-wrapper__btn" href="https://forum.u0618804.plsk.regruhosting.ru/quizle/66e3f8e590846/">заказать</a>
         </div>      
     </div>
 </section>

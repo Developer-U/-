@@ -12,7 +12,7 @@ $about_text = get_field('about_text');
 if ($about_text) {
     ?>
 
-    <section class="about">
+    <section id="about" class="about">
         <div class="container">
             <div class="right-text d-grid">
                 <div class="swiper about__slider about-slider">

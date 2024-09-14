@@ -7,6 +7,7 @@
     --depp-purple: #630A77;
     --dark: #69548E;
     --light-grey: #F0EEF4;
+    --alice: 'Alice', serif;
 }
 
 body {
@@ -62,7 +63,8 @@ body .button {
     color: var(--white);
     display: flex;
     align-items: center;
-    font-size: 24px;
+    font-size: 20px;
+    font-weight: 300;
     letter-spacing: 2px;
     line-height: 120%;
     background: linear-gradient(to right, var(--purple), var(--depp-purple));
@@ -84,6 +86,21 @@ body .button.active {
 section {
     padding-top: 94px;
     padding-bottom: 94px;
+}
+
+section.advantages {
+    padding-top: 127px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+section.reviews-section {
+    padding-top: 143px;
+}
+
+section.standart-page {
+    padding-top: 184px;
 }
 
 .post p:not(:last-of-type), .post ul, .post ol {
@@ -121,7 +138,20 @@ body h1::before {
     left: -33px;
     width: 150px;
     height: 150px;
-    bottom: 30px;
+    top: -40px;
+}
+
+body h2::before {
+    background-image: url('../img/h2_title_decor.svg');
+    background-size: contain;
+    left: -3px;
+    width: 100px;
+    height: 100px;
+    top: -44px;
+}
+
+body .dark h2::before {
+    background-image: url('../img/h1_title_decor.svg');
 }
 
 .dark-bg {
@@ -147,6 +177,21 @@ body h1::before {
 .right-text-box>div {
     margin-bottom: 50px;
 }
+
+.grid-first {
+    order: -1;
+}
+
+body .button.more-btn {
+    margin: 3.5rem auto 0;
+    display: block;
+}
+
+.grid-two {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
 
 /*Media*/
 @media (max-width:1765px) {
@@ -174,6 +219,18 @@ body h1::before {
         padding-top: 3rem;
         padding-bottom: 2rem;
     }
+
+    section.advantages {
+        padding-top: 100px;
+    }
+
+    section.reviews-section {
+        padding-top: 110px;
+    }
+
+    section.standart-page {
+        padding-top: 150px;
+    }
 }
 
 @media (max-width:1199px) {
@@ -192,7 +249,13 @@ body h1::before {
     body h1::before {
         width: 70px;
         height: 70px;
-        bottom: 24px;
+        top: -10px;
+    }
+
+    body h2::before {
+        width: 70px;
+        height: 70px;
+        top: -27px;
     }
 
     .right-text-box {
@@ -208,12 +271,24 @@ body h1::before {
     .right-text-box>div {
         margin-bottom: 34px;
     }
+
+    section.advantages, section.reviews-section {
+        padding-top: 80px;
+    }
+
+    body .button.more-btn {
+        margin-top: 2.7rem;
+    }
 }
 
 @media (max-width:991px) {
     .right-text {
         grid-template-columns: 1fr;
         gap: 40px;
+    }
+
+    section.standart-page {
+        padding-top: 124px;
     }
 
     .right-text-box>div {
@@ -234,6 +309,15 @@ body h1::before {
     section.hero {
         padding-bottom: 12px;
     }
+
+    .grid-first {
+        order: 0;
+    }
+
+    .cta__wrap.grid-two {
+        grid-template-columns: calc(40% - 25px) 60%;
+        gap: 25px;
+    }
 }
 
 @media (max-width:930px) and (max-height:420px) {
@@ -253,7 +337,22 @@ body h1::before {
     .right-text {
         grid-template-columns: 50% calc(50% - 20px);
         gap: 20px;
-    }    
+    }
+
+    section.advantages, section.reviews-section {
+        padding-top: 60px;
+    }
+
+    body .button.more-btn {
+        margin-top: 2rem;
+    }
+
+    section.cta {
+        padding-bottom: 20px;
+    }
+    section.standart-page {
+        padding-top: 94px;
+    }
 }
 
 @media (max-width:767px) {
@@ -266,8 +365,32 @@ body h1::before {
         padding-bottom: 60px;
     }
 
+    section.cta {
+        padding-bottom: 20px;
+    }
+
     .post p:not(:last-of-type), .post ul, .post ol {
         margin-bottom: 18px;
+    }
+
+    body h2::before {
+        width: 60px;
+        height: 60px;
+    }
+
+    section.advantages, section.reviews-section {
+        padding-top: 60px;
+    }
+
+    body .button.more-btn {
+        margin-top: 2rem;
+    }
+
+    .cta__wrap.grid-two {
+        grid-template-columns: 1fr;
+    }
+    section.standart-page {
+        padding-top: 43px;
     }
 }
 
@@ -279,12 +402,15 @@ body h1::before {
     body h1::before {
         width: 60px;
         height: 60px;
-        bottom: 14px;
     }
 
     body .button {
         font-size: 17px;
         width: 100%;
         letter-spacing: 1px;
+    }
+
+    .gallery-list {
+        gap: 6px;
     }
 }

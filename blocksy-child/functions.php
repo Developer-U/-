@@ -43,3 +43,8 @@ require get_stylesheet_directory() . '/includes/navigations.php';
  */
 require get_stylesheet_directory() . '/includes/duplicate-types.php';
 
+/*
+ * Добавим произвольные типы записей
+ */
+require get_stylesheet_directory() . '/includes/post-types.php';
+

@@ -49,7 +49,7 @@ $phone_num = get_field('tel', 'options');
 
 ?>
 
-	<header class="header">
+	<header class="header <?php if( !is_front_page()) {?>dark<?php } ?>">
 		<div class="container-fluid">
 			<div class="header__wrapper d-flex justify-content-between align-items-center">
 				<a href="/" class="header__logo col-auto">
@@ -58,7 +58,15 @@ $phone_num = get_field('tel', 'options');
 
 				<div class="header__center header-center">
 					<!-- Здесь вставляем template-part -->
-					<?php get_template_part('template-parts/nav', 'menu'); ?>
+					<?php 
+					if(is_front_page()) {
+						get_template_part('template-parts/nav', 'menu'); 
+					} else {
+						echo '<ul id="primary-menu" class="menu other-pages-menu">';
+						echo '<li><a href="/">на главную</a></li>';
+						echo '</ul>';
+					}
+					?>
 				</div>
 
 				<?php
