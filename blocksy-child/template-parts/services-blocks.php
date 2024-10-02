@@ -25,16 +25,17 @@ if ($query_services->have_posts()) {
         $index_service = $x++;
         ?>
 
-        <section id="index-<?php echo $index_service; ?>" class="service-section <?php if ($index_service == 0 || $index_service % 2 == 0) { ?>dark<?php } ?>">
+        <section id="index-<?php echo $index_service; ?>"
+            class="service-section <?php if ($index_service == 0 || $index_service % 2 == 0) { ?>dark<?php } ?>">
             <div class="container">
                 <div class="service-section__wrap service-wrap d-flex">
                     <div class="service-wrap__texts service-texts">
-                        <h2> <?php the_title(); ?></h2>
+                        <h2 class="service-title"> <?php the_title(); ?></h2>
 
                         <div class="service-texts__content post"><?php the_content(); ?></div>
 
                         <div class="d-none d-lg-block">
-                            <?php echo do_shortcode('[contact-form-7 id="8f6e71a" title="Заказать услугу"]'); ?>
+                            <?php echo do_shortcode('[contact-form-7 id="0e9a0fe" title="Заказать услугу"]'); ?>
                         </div>
                     </div>
 
@@ -63,7 +64,7 @@ if ($query_services->have_posts()) {
                     </div>
 
                     <div class="d-block d-lg-none">
-                        <?php echo do_shortcode('[contact-form-7 id="7ad7697" title="Форма заказать услугу"]'); ?>
+                        <?php echo do_shortcode('[contact-form-7 id="0e9a0fe" title="Заказать услугу"]'); ?>
                     </div>
                 </div>
             </div>
@@ -71,3 +72,19 @@ if ($query_services->have_posts()) {
     <?php endwhile;
     wp_reset_postdata() ?>
 <?php } ?>
+
+<script>
+    jQuery(function ($) {
+        let sections = $('.service-section'); // Все секции услуг
+        sections.each(function () {
+            // console.log($(this));
+            let text = $(this).find('.service-title'); // добираемся до названия       
+            let service_type = text.text(); // вычисляем название текущей услуги
+            // console.log(service_type);
+            let service_hidden = $(this).find('input[name="service_type"]');
+            service_hidden.val(service_type);
+
+        })
+
+    });
+</script>

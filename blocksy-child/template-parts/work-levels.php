@@ -29,32 +29,32 @@ if (have_rows('new_level')) {
             ?>
 
             <ul class="levels__list gallery-list levels-list d-grid">
-                <?php if (have_rows('new_level')): 
+                <?php if (have_rows('new_level')):
                     $i = 1;
                     ?>
                     <?php while (have_rows('new_level')):
                         the_row();
-                        $level_index = $i++;              
+                        $level_index = $i++;
                         $level_text = get_sub_field('level_text');
                         ?>
 
-                        <li class="levels-list__item level-item"> 
+                        <li class="levels-list__item level-item">
                             <div class="level-item__block" data-index="<?php echo $level_index; ?>">
                                 <h3 class="level-item__num">
                                     <?php echo $level_index; ?>
                                 </h3>
-                            
+
                                 <div class="level-item__text">
                                     <?php echo $level_text; ?>
-                                </div>                               
-                            </div>                            
+                                </div>
+                            </div>
                         </li>
 
                     <?php endwhile; ?>
                 <?php endif; ?>
             </ul>
 
-            <a class="button" href="https://forum.u0618804.plsk.regruhosting.ru/quizle/66e3f8e590846/">сделать заказ</a>
+            <button class="button" data-popup-open="zakaz-popup">сделать заказ</button>
         </div>
     </section>
 

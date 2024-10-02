@@ -53,13 +53,13 @@ if (have_rows('new_hero_slide')) { ?>
 
                 <?php
                 if($hero_subtitle) {
-                    echo '<h3 class="hero-wrapper__subtitle">';
+                    echo '<h4 class="hero-wrapper__subtitle">';
                     echo $hero_subtitle;
-                    echo '</h3>';  
+                    echo '</h4>';  
                 } ?>              
             </div>
             
-            <a class="button hero-wrapper__btn" href="https://forum.u0618804.plsk.regruhosting.ru/quizle/66e3f8e590846/">заказать</a>
+            <button class="button hero-wrapper__btn" data-popup-open="zakaz-popup">заказать</button>
         </div>      
     </div>
 </section>

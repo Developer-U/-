@@ -37,7 +37,7 @@ window.addEventListener('DOMContentLoaded', function(){
         }
     
         for(let i=8; i<allnewsPosts.length; i++) {
-            console.log(allnewsPosts[i]);
+           
             allnewsPosts[i].style.display = 'none';             
         }   
     

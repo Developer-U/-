@@ -12,14 +12,14 @@ if( $socials['whatsapp'] || $socials['telegram'] || $socials['vk']) {
         <?php
         if( $socials['whatsapp'] ) { ?>
             <li class="social__item">
-                <a href="https://api.whatsapp.com/send?phone=<?php echo $socials['whatsapp']; ?>" target="_blank" class="social__link whatsapp">									
+                <a href="https://api.whatsapp.com/send?phone=7<?php echo $socials['whatsapp']; ?>" target="_blank" class="social__link whatsapp">									
                 </a>
             </li>
         <?php };						
 
         if( $socials['telegram'] ) { ?>
             <li class="social__item">
-                <a href="https://t.me/<?php echo $socials['telegram']; ?>" target="_blank" class="social__link telegram">								
+                <a href="https://t.me/+7<?php echo $socials['telegram']; ?>" target="_blank" class="social__link telegram">								
                 </a>
             </li>
         <?php };

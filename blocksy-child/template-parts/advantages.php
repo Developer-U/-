@@ -13,9 +13,10 @@ $advantages_background = get_field('advantages_background', 'options');
 if (have_rows('new_advantage', 'options')) {
     ?>
 
-    <section id="advantages" class="advantages dark"
+    <section id="advantages" class="advantages dark position-relative"
         style="background-image: url('<?php echo $advantages_background['url']; ?>)">
-        <div class="container">
+        <div class="dark-bg position-absolute"></div>
+        <div class="container position-relative">
             <?php
             if ($advantages_title) {
                 echo '<h2 class="advantages__title">';

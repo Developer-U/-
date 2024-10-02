@@ -115,13 +115,36 @@ if ($query_reviews->have_posts() || have_rows('new_reviews', 'options')) {
                     </ul>
 
                     <?php
-                    if($reviews_text) {
-                        echo '<div class="reviews-section__bottom reviews-bottom d-grid">';
+                    if ($reviews_text) {
+                        echo '<div class="reviews-section__first reviews-section__bottom reviews-bottom d-grid">';
                         echo '<div class="post">' . $reviews_text . '</div>';
                         echo '<a class="button" href="https://forum.u0618804.plsk.regruhosting.ru/quizle/66e3f8e590846/">заказать</a>';
                         echo '</div>';
                     } ?>
-                    </div>
+                </div>
+            <?php }
+
+            // Блок благодарственные письма
+            if (have_rows('new_reviews_letters', 'options')) { ?>
+                <div class="reviews-section__third">
+                    <span class="reviews__texts">Благодарствнные письма</span>
+
+                    <ul class="reviews__letters reviews-video reviews-letters d-grid">
+                        <?php if (have_rows('new_reviews_letters', 'options')): ?>
+                            <?php while (have_rows('new_reviews_letters', 'options')):
+                                the_row();
+                                $reviews_letter = get_sub_field('reviews_letter', 'options');
+                                ?>
+
+                                <li class="reviews-letters__item position-relative">
+                                    <a class="picture-link" href="<?php echo $reviews_letter['url']; ?>" data-fancybox="letters">
+                                        <img src="<?php echo $reviews_letter['url']; ?>" alt="<?php echo $reviews_letter['alt']; ?>">
+                                    </a>
+                                </li>
+
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+                    </ul>
                 </div>
             <?php } ?>
         </div>

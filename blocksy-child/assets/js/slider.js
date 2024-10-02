@@ -3,15 +3,15 @@ window.addEventListener('DOMContentLoaded', function(){
         slidesPerView: 1, 
         spaceBetween: 4,  
         loop: true, 
-        // speed: 700,    
+        speed: 700,    
         // keyboard: {
         //     enabled: true,
         //     pageUpDown: true,
         // },       
-        // autoplay: {
-        //     delay: 4000,            
-        //     waitForTransition: true,
-        // },  
+        autoplay: {
+            delay: 4000,            
+            waitForTransition: true,
+        },  
     });
 
     const about_swiper = new Swiper(".about-slider", {

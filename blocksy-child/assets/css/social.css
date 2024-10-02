@@ -1,7 +1,7 @@
 /*Social icons*/
 .social {
-    display: grid;
-    grid-template-columns: 40px 40px 40px;
+    display: flex;
+    justify-content: center;
     gap: 10px;
     align-items: center;
 }
@@ -11,7 +11,7 @@
 }
 
 .social__item {
-    width: 100%;
+    width: 40px;
     height: 40px;
     padding: 0;
 }
@@ -93,7 +93,10 @@
 
 @media (max-width:439px) {
     .social {
-        grid-template-columns: 25px 25px 25px;
         gap: 6px;
+    }
+    .social__item {
+        width: 25px;
+        height: 25px;      
     }
 }

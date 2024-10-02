@@ -32,7 +32,8 @@
 }
 
 a.header__tel:hover {
-    color: grey;
+    color: var(--white);
+    outline: 2px solid var(--purple);
 }
 
 header #primary-menu li {
@@ -225,7 +226,7 @@ button.burger svg {
         font-size: 18px;
     }
 
-   
+
 }
 
 @media (max-width:767px) {
@@ -280,7 +281,7 @@ button.burger svg {
         width: 30px;
         height: 30px;
         background: url('../img/home_icon.svg') no-repeat center/contain;
-    }    
+    }
 
 }
 

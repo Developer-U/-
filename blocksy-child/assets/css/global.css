@@ -107,6 +107,16 @@ section.standart-page {
     margin-bottom: 30px;
 }
 
+.post ul {
+    padding-left: 20px;
+}
+
+.post ul li {
+    padding-left: 0;
+    margin-bottom: 4px;
+    list-style-type: disc;
+}
+
 .post .share p {
     margin-bottom: 0;
 }
@@ -170,7 +180,7 @@ body .dark h2::before {
 }
 
 .right-text-box {
-    padding-top: 4rem;
+    /* padding-top: 4rem; */
     padding-bottom: 3rem;
 }
 
@@ -216,7 +226,7 @@ body .button.more-btn {
     }
 
     .right-text-box {
-        padding-top: 3rem;
+        /* padding-top: 3rem; */
         padding-bottom: 2rem;
     }
 
@@ -259,7 +269,7 @@ body .button.more-btn {
     }
 
     .right-text-box {
-        padding-top: 1rem;
+        /* padding-top: 1rem; */
         padding-bottom: 1rem;
     }
 
@@ -350,6 +360,7 @@ body .button.more-btn {
     section.cta {
         padding-bottom: 20px;
     }
+
     section.standart-page {
         padding-top: 94px;
     }
@@ -389,6 +400,7 @@ body .button.more-btn {
     .cta__wrap.grid-two {
         grid-template-columns: 1fr;
     }
+
     section.standart-page {
         padding-top: 43px;
     }

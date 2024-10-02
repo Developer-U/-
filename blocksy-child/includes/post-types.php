@@ -25,9 +25,9 @@ function services()
 
   $args = array(
     'labels' => $labels,
-    'public' => false,
+    'public' => true,
     'menu_icon' => 'dashicons-megaphone',
-    'publicly_queryable' => false,
+    'publicly_queryable' => true,
     'show_ui' => true,
     'show_in_menu' => true,
     'show_in_nav_menus'   => true,

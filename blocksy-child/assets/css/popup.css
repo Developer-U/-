@@ -27,13 +27,16 @@
 .popup__cont {
     width: 600px;
     max-height: 80vh;
-    overflow-y:scroll;
+    overflow-y:auto;
     background-color: var(--light-grey);
     padding: 40px;
     border-radius: 14px;
 }
 .popup__cont * {
     text-align: center;
+}
+.popup__cont.zakaz-cont * {
+    text-align: left;
 }
 h3.popup__heading {
     font-size: 37px;
